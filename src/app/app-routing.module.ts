@@ -8,8 +8,16 @@ import { AboutComponent } from './about/about.component';
 const routes: Routes = [
   { path: "", redirectTo: "/welcome", pathMatch: "full" },
   { path: "welcome", component: WelcomeComponent },
-  { path: "about", component: AboutComponent},
-  { path: "albums", component: AlbumListComponent },
+  { path: "about", loadChildren: () => import('./about/about.module')
+    .then(mod => {
+      console.log('in promise loadChildren');
+      return mod.AboutModule;
+    })},
+  { path: "albums", loadChildren: () => import('./albums/albums.module')
+  .then(mod => {
+  console.log('in promise loadChildren');
+  return mod.AlbumsModule;
+  })},
   {path: "**", component: NotfoundComponent, pathMatch: "full"}
 ];
 

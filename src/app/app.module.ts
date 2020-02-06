@@ -9,22 +9,22 @@ import { AlbumCardComponent } from './albums/album-card/album-card.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotfoundComponent } from './notfound/notfound.component';
-import { AboutComponent } from './about/about.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlbumListComponent,
-    AlbumCardComponent,
+
     WelcomeComponent,
     NavbarComponent,
-    NotfoundComponent,
-    AboutComponent
+    NotfoundComponent
+
   ],
   imports: [
     BrowserModule,
      AppRoutingModule,
-     HttpClientModule
+     HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
