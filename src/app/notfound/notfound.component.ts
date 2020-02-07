@@ -1,18 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-notfound',
+  selector: "app-notfound",
   template: `
-     <h1 class="mt-3 mx-auto w-50">Error 404</h1>
-  <p class="mt-3 mx-auto w-50">Page not found</p>
+    <h1 class="mt-3 mx-auto w-50">Error 404</h1>
+    <p class="mt-3 mx-auto w-50">Page not found</p>
   `,
   styles: []
 })
 export class NotfoundComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

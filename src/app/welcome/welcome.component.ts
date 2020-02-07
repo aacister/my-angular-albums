@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './welcome.component.html',
   styles: []
 })
-export class WelcomeComponent implements OnInit {
-  title = 'My Angular Albums';
-  constructor() { }
+export class WelcomeComponent  {
 
-  ngOnInit() {
-  }
+  title = "My Angular Albums"
 
 }

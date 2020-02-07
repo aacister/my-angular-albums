@@ -9,19 +9,24 @@ import { AlbumService } from '../shared/album.service';
   styleUrls: ['./album-details.component.css']
 })
 export class AlbumDetailsComponent implements OnInit {
-  album: Album;
 
-  constructor(private route: ActivatedRoute,
-    private albumService: AlbumService) { }
+    album: Album;
 
-  ngOnInit() {
-    const id = +this.route.snapshot.paramMap.get("id");
-    this.albumService.getAlbumById(id).subscribe(
-      album => {
-        this.album = album;
-      },
-      error => console.log("Error: ", error)
-    );
+    constructor(
+      private route: ActivatedRoute,
+      private albumService: AlbumService
+    ) {}
+
+    ngOnInit() {
+      const id = +this.route.snapshot.paramMap.get("id");
+      this.albumService.getAlbumById(id).subscribe(
+        album => {
+          this.album = album;
+        },
+        error => console.log("Error: ", error)
+      );
+    }
+
   }
 
-}
+

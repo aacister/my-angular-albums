@@ -1,32 +1,32 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { HttpClientModule } from "@angular/common/http";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { AlbumListComponent } from './albums/album-list/album-list.component';
-import { AlbumCardComponent } from './albums/album-card/album-card.component';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+// import { AlbumListComponent } from "./albums/album-list/album-list.component";
+// import { AlbumCardComponent } from "./albums/album-card/album-card.component";
+// import { AlbumService } from "./albums/shared/album.service";
+// import { AboutComponent } from "./about/about.component";
+import { NavbarComponent } from "./navbar/navbar.component";
 import { NotfoundComponent } from './notfound/notfound.component';
-
+// import { AlbumsModule } from './albums/albums.module';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { AlbumsModule } from './albums/albums.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-
-    WelcomeComponent,
+    // AboutComponent,
     NavbarComponent,
-    NotfoundComponent
-
+    NotfoundComponent,
+    WelcomeComponent,
+    LoginComponent
   ],
-  imports: [
-    BrowserModule,
-     AppRoutingModule,
-     HttpClientModule,
-
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule,
+    AlbumsModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

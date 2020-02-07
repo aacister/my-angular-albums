@@ -3,10 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about.component';
 
 
-const routes: Routes = [{path: "", pathMatch: "full", component: AboutComponent}];
+const routes: Routes = [
+  { path: "", pathMatch: "full", component: AboutComponent }
+];
+
 
 @NgModule({
-
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
